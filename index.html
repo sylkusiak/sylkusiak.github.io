@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sylwia Kusiak | UX Design Portfolio</title>
+    <script>
+  function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+                 }
+   </script>
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+
+        <!-- jQuery code to scroll to footer -->
+        <script>
+            $(document).ready(function() {
+                $("contact").click(function() {
+                    $(document).scrollTop($(document).height());
+                });
+            });
+        </script>
+</head>
+    <body>
+    <header>
+      <nav class="fixed-nav-bar">
+        <a href="Index.html"><img src="Images/logo.svg" class="sylwia_logo"></a>
+      <div class="menu">
+        <ul>
+        <li></li>
+        <li><a href="about.html" class="menu__item">About</a></li>
+        <li><a href="#my_work" class="menu__item">Work</a></li>
+        <li><a href="#contact" class="menu__contact"><contact>Contact</contact></a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Introduction -->
+
+    <section class="intro">
+    <img src="Images/sylwiaheadshot.png" class="header-img">
+    <div class="sylwia_title"><h1 class="title">Sylwia <a class="highlighted" href="#" value="PLAY" onclick="play()"><span class="orange">(pronounced sil-vee-ah)</span></a> is a
+      UX designer with a data-driven mind and the soul of an artist. </h1>
+      <div class="explore_work"><a href="#my_work"><h2><span class="blue">EXPLORE MY WORK <img src="Images/explore_arrow.png" class="arrow"></a>
+      </h2></span>
+    </div>
+  </section>
+
+    <!-- About Blurb -->
+
+    <section class="sylwia_subtitle">
+      <p>My professional background within tech sales and contemporary art
+      allows me to bring a fresh perspective to the user experience. I’m an
+      advocate for creating memorable designs that are rooted in strong
+      user research and innovative visual principles.
+    </p>
+    <br>
+      <p>When I’m not going with the <span class="blue">(user)</span> flow, I like to completely let go
+      and paint. There’s nothing that gives me more peace than a blank canvas
+      just waiting to get paint thrown on it. Learn a little bit more
+      about me <a href="about.html"><span class="orange">over here!</span></a> ✨
+    </p>
+  </section>
+
+    <!-- Case Studies -->
+
+      <section class="my_case_studies" id="my_work">
+
+      <!-- First Case Study: Workflo -->
+
+      <div class="first_case_study">
+      <img class="workflo_pic" src="Images/workflo_pic.svg">
+      <div class="workflo_container"><a href="workflo.html"><h3> WORKFLO | CLOUD STORAGE </h3>
+    </a>
+      <p class="casestudy_subtitle">An intuitive cloud collaboration tool to improve the workflow of teams of all sizes, within various industries.</p>
+    </div>
+  </div>
+
+      <!-- Second Case Study: Odea -->
+
+      <div class="second_case_study">
+      <img class="soundmix_pic" src="Images/odeapic.png">
+      <div class="odea_container"><h3> ODEA | VIRTUAL REALITY CONCERT STREAMING </h3>
+      <p class="casestudy_subtitle">Live concert streaming platform using machine learning to personally curate the user's virtual music experience. </p>
+    </div>
+  </div>
+
+      <!-- Third Case Study: Salesforce -->
+
+      <div class="third_case_study">
+      <img class="salesforce_pic" src="Images/salesforce_pic.svg">
+      <div class="salesforce_container"><h3> SALESFORCE PROJECT | OPERATIONS MANAGEMENT </h3>
+      <p class="casestudy_subtitle">Improving the way high growth start-ups manage and maintain their business operations data within the CRM platform.</p>
+    </div>
+  </div>
+</section>
+
+    <!-- Design Manifesto -->
+
+    <section class="my_design_manifesto">
+      <h1 class="design_manifesto_title">my design manifesto</h1>
+      <img class="design_manifesto_pic" src="Images/designmanifesto.svg">
+  </section>
+
+    <!-- Testimonials -->
+
+    <section class="my_testimonials">
+      <div class="testimonials_title"><h1>testimonials</h1>
+      <h3>(a few kind words about me)</h3>
+    </div>
+      <div class="testimonial_container">
+        <img class="mentor_pic" src="Images/tiffany.svg">
+          <div class="testimonial_review">
+            <p class="testimonial_text">“There are so many great things I can say about Sylwia! Not only is she a creative designer, but she also does a great job critically thinking about the user experiences she creates. She’s not afraid to ask questions, think outside the box, and try different approaches. This will take her far in the industry.
+              In addition, Sylwia is a great communicator, takes feedback well and is always looking for ways to expand her skills. I know she'll continue to create great user experiences, and any company would be lucky to have Sylwia on their team.”</p>
+              <h3 class="mentor_text">- Tiffany Whitener, Mentor and UX Lead at Statefarm </h3>
+            </div>
+    </div>
+      <div class="testimonial_container">
+        <img class="mentor_pic" src="Images/miked.svg">
+          <div class="testimonial_review">
+            <p class="testimonial_text"> “A very nice and generous testimonial about Sylwia and how awesome she is at UX design including but not limited to research, prototyping, branding strategies, and all sorts of User Experience and User Interface skills. Great great great.
+              And some more high praise and what not over in this section.”</p>
+              <h3 class="mentor_text">- Mike Dekker, UX Consultant </h3>
+            </div>
+  </div>
+    </section>
+
+    <!-- Audio Recording for 'Sylwia' pronunciation -->
+
+      <audio id="audio" src="Images/Sylwia.m4a"></audio>
+
+      <footer>
+        <div class="footer_container">
+        <img src="https://cliply.co/wp-content/uploads/2019/06/391906110_WAVING_HAND_400px.gif" class="hand">
+        <h1 class="connect">LET'S CONNECT</h1>
+        <ul>
+        <li><a href="mailto:sylwiakus.ux@gmail.com"><i class="fa fa-envelope-open-o" aria-hidden="true" style="font-size:40px;"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/sylwiakusiakux/"><i class="fa fa-linkedin-square" aria-hidden="true" style="font-size:40px;"></i></a></li>
+        <li><a href="https://www.instagram.com/sylwia.ux/"><i class="fa fa-instagram" aria-hidden="true" style="font-size:40px;"></i></a></li>
+        <li><a href="https://dribbble.com/sylwia-kusiak"><i class="fa fa-dribbble" aria-hidden="true" style="font-size:40px;"></i></a></li>
+        </ul>
+        <p class="email">sylwiakus.ux@gmail.com</p>
+      </div>
+      </footer>
+  </body>
+</html>
