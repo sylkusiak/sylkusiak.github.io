@@ -1,0 +1,596 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: 'Open Sans', sans-serif;
+  --ff-secondary: 'Poppins', sans-serif;
+
+  --fw-reg: 400;
+  --fw-med: 600;
+  --fw-semibold: 700;
+  --fw-bold: 800;
+
+  --fs-h1: 32px;
+  --fs-h2: 23px;
+  --fs-h3: 22px;
+  --fs-body: 18px;
+}
+
+@media (min-width: 900px) {
+  :root {
+    --fs-h1: 46px;
+    --fs-h2: 30px;
+    --fs-h3: 26px;
+    --fs-body: 22px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+body {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6em;
+  margin-bottom: 50px;
+}
+
+/* Typography */
+
+h1 {
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h1);
+  line-height: 1.6em;
+  color: #0F0B0A;
+}
+
+.orange {
+  color: #FE9C0A;
+}
+
+h2 {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-med);
+}
+
+h3 {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-h3);
+}
+
+a:link , a:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+p a:hover {
+  border-bottom: 4px solid;
+  border-bottom-color: #2933D5;
+  transition: .18s;
+}
+
+strong {
+  color: #2933D5;
+  font-weight: 800;
+}
+
+.blue {
+  color: #2933D5;
+}
+
+/* Navigation Bar */
+
+.sylwia_logo {
+  margin: auto;
+  position: fixed;
+  display: inline-block;
+  float: left;
+  padding-left: 2%;
+  padding-top: 5px;
+}
+
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.menu {
+  display: grid;
+  justify-content: flex-end;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header li {
+  margin: auto;
+  padding: 15px 20px 15px;
+}
+
+header ul {
+  display: flex;
+  margin: 0 auto;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.menu__item {
+  text-decoration: none;
+  font-size: var(--fs-body);
+  font-weight: 700;
+  letter-spacing: .09em;
+  transition:.8s;
+}
+
+.menu__item:hover {
+  border-bottom: 4px solid;
+  border-bottom-color: #2933D5;
+  transition: .18s;
+}
+
+.menu__item:visited {
+  color: #02005F;
+}
+
+.menu__contact {
+  text-decoration: none;
+  font-size: var(--fs-body);
+  font-weight: 700;
+  letter-spacing: .09em;
+  transition:.8s;
+}
+.menu__contact:hover {
+  border-color: transparent;
+  padding: 7px;
+  color: white;
+  background: linear-gradient(270deg,#e20a0a,#FE9C0A,#10927A,#116EDB,#bb11e1,#e20a0a);
+  background-size: 800% 800%;
+  animation: HoverGradient 6s linear infinite;
+}
+/* Header Image + Header Intro Wrapping */
+
+.intro {
+  position: relative;
+  background: #EFF3FC;
+}
+.sylwia_title {
+  align-items: center;
+  width: 100%;
+  padding: 10% 5% 10%;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    display: grid;
+    grid-template-areas:
+    "img title"
+    "explore arrow";
+    grid-template-columns: max-content;
+  }
+
+  .header-img {
+    min-width: 105%;
+    max-height: 105%;
+  }
+
+  .sylwia_title {
+    grid-area: title;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 80px;
+    width: 80%;
+    height: auto;
+  }
+
+h2.blue {
+    grid-area: explore;
+    position: relative;
+    display: grid;
+  }
+}
+
+/* Header Picture of Sylwia holding Coffee */
+
+.header-img {
+  display: block;
+  object-fit: cover;
+  animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+/* Header Text:*/
+/* Sylwia (pronounced sil-vee-ah) is a UX Designer with a data-driven mind and the soul of an artist. */
+
+h1.title {
+  animation: right_to_left 1.2s ease;
+}
+
+@keyframes right_to_left {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+/* Header text Hovered: Pronounced sil-vee-ah */
+
+.highlighted {
+  text-decoration: none;
+  color: #FE9C0A;
+  font-weight: 100;
+  cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='51' viewport='0 0 100 100' style='fill:black;font-size:30px;'><text y='50%'>🎶 </text></svg>") 16 0,auto;
+}
+
+.highlighted:hover {
+    border-color: transparent;
+    background: linear-gradient(270deg,#e20a0a,#ffc200,#74e10b,#12b1e1,#bb11e1,#e20a0a);
+    background-size: 500% 500%;
+    animation: HoverGradient 2s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &--emoji-cursor {
+      background-color: #4267b2;
+      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>"), auto;
+    }
+}
+@keyframes HoverGradient {
+  0% {
+    background-position: 0% 50%
+  }
+  100% {
+    background-position: 250% 50%
+  }
+}
+
+/* EXPLORE MY WORK */
+
+h2.blue {
+  display: block;
+  padding: 40px 0px 60px 6px;
+  opacity:0.75;
+  color: #2933D5;
+  animation: right_to_left 1.6s ease;
+}
+
+@keyframes right_to_left {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+h2:hover {
+  opacity: 1;
+  font-size: 26px;
+  transition: .99s;
+}
+
+@media (min-width: 768px) {
+  h2:hover {
+  font-size: 32px;
+  }
+}
+
+.arrow {
+  position: relative;
+  animation: MoveUpDown 1.5s linear infinite;
+  padding-left: 35px;
+}
+
+.explore_work {
+  padding: 5% 0% 5%;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: -30px;
+  }
+  50% {
+    bottom: -10px;
+  }
+}
+
+/* Subtitle Text */
+
+.sylwia_subtitle {
+  margin: 0;
+  display: block;
+  padding: 40px 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .sylwia_subtitle {
+  display: block;
+  padding: 5% 20% 5%;
+  }
+}
+
+
+/* Case Studies */
+
+.my_case_studies {
+  margin: 0 auto;
+}
+
+.casestudy_subtitle {
+  padding-top: 20px;
+}
+
+.button_container {
+  position: relative;
+  justify-content: center;
+  padding-top: 8%;
+  padding-bottom: 3%;
+}
+
+#buttonlink {color: #2933D5;}
+
+#buttonlink:hover {color: #ffffff;}
+
+.view_all_button {
+  color: #2933D5;
+  border: 1px solid #2933D5;
+  box-sizing: border-box;
+  border-radius: 50px;
+  padding: 3%;
+  transition: .8s;
+}
+
+.view_all_button:hover {
+  box-sizing: border-box;
+  background-color: #2933D5;
+  transition: .8s;
+
+}
+
+/* Workflo Case Study */
+
+.first_case_study {
+  background: #EAEDF5;
+}
+
+.first_case_study:hover {
+  background: #A3B3E0;
+}
+
+.workflo_container {
+  padding: 50px 50px 50px;
+}
+
+@media (min-width: 768px) {
+  .first_case_study {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+  }
+
+  .workflo_container {
+    width: 75%;
+    display: block;
+    margin: auto;
+  }
+
+  .workflo_pic {
+    object-fit: cover;
+  }
+}
+
+/* Odea Music Case Study */
+
+.second_case_study {
+  background: #ffffff;
+}
+
+.second_case_study:hover {
+  background: #CBA3FD;
+}
+
+.odea_container {
+  padding: 50px 50px 50px;
+}
+
+@media (min-width: 768px) {
+  .second_case_study {
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    grid-template-areas:
+    "text img";
+  }
+
+  .odea_container {
+    width: 75%;
+    display: block;
+    margin: auto;
+    grid-area: text;
+  }
+
+  .soundmix_pic {
+    grid-area: img;
+    object-fit: cover;
+  }
+}
+
+/* Salesforce Case Study */
+
+.third_case_study {
+  background: #ECF1FF;
+}
+
+.third_case_study:hover {
+  background: #ACDCFF;
+}
+
+.salesforce_container {
+  padding: 50px 50px 50px;
+}
+
+@media (min-width: 768px) {
+  .third_case_study {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+  }
+
+  .salesforce_container {
+    width: 75%;
+    display: block;
+    margin: auto;
+  }
+
+  .salesforce_pic {
+    object-fit: cover;
+  }
+}
+/* Design Manifesto */
+
+.my_design_manifesto {
+  margin: 0 auto;
+  padding: 60px 0px 50px;
+}
+
+.design_manifesto_title {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.design_manifesto_pic {
+  padding: 50px 30px 60px;
+}
+
+@media (min-width: 700px) {
+
+  .design_manifesto_pic {
+  width: 100%;
+  align-items: center;
+  padding: 5% 5% 0%;
+  }
+
+  .my_design_manifesto {
+    padding: 10% 0px 10%;
+  }
+}
+/* Testimonials */
+
+.testimonial_text {
+  font-size: 15px;
+}
+
+.mentor_text {
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+.my_testimonials {
+  margin: 0;
+  background: #EFF3FC;
+  padding: 15px 0px 15px;
+}
+
+.testimonials_title {
+  display: block;
+  padding: 20px 0px 25px;
+  text-align: center;
+}
+
+.testimonial_container {
+  display: block;
+  padding: 10px 5px 10px;
+}
+
+.testimonial_review {
+  display: block;
+  margin: auto;
+  padding: 0px 40px 20px;
+}
+
+.mentor_pic {
+  display: block;
+  margin: auto;
+  padding-right: 20px;
+}
+
+@media (min-width: 700px) {
+
+  .testimonial_container {
+    display: flex;
+    padding: 0px 30px 0px;
+  }
+
+  .testimonial_text {
+    width: 600px;
+    font-size: 16px;
+  }
+
+  .mentor_pic {
+    margin: 0 auto;
+    width: 25%;
+  }
+}
+
+/* Footer Section */
+
+footer {
+  position: relative;
+  margin: auto;
+  padding: 10px 50px 0px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  padding: 0px 10px 0px;
+}
+
+.footer_container {
+  display: block;
+  text-align: center;
+}
+
+/* Footer Typography Styling */
+
+.connect {
+  padding: 0px 0px 25px;
+}
+
+.email {
+  padding: 25px 0px 0px;
+}
+
+@media (min-width: 700px) {
+  footer {
+    position: relative;
+    margin: auto;
+    align-items: center;
+  }
